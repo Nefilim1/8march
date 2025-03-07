@@ -29,17 +29,20 @@ body {
 }
 
 .message-container {
-    background: rgba(255, 255, 255, 0.9);
+    background: rgba(255, 255, 255, 0.95);
     padding: 2rem;
     border-radius: 20px;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
     margin-top: 2rem;
+    position: relative;
+    z-index: 2;
 }
 
 h1 {
     color: var(--primary-color);
     margin-bottom: 1.5rem;
     font-size: 2.5rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .message-box {
@@ -51,6 +54,7 @@ h1 {
     display: flex;
     align-items: center;
     justify-content: center;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
 }
 
 button {
@@ -62,6 +66,7 @@ button {
     font-size: 1.2rem;
     cursor: pointer;
     transition: transform 0.3s, box-shadow 0.3s;
+    z-index: 2;
 }
 
 button:hover {
@@ -80,13 +85,15 @@ button:hover {
     border-radius: 50%;
     box-shadow: 0 0 50px #ffd700;
     animation: sunGlow 3s infinite;
+    z-index: 1;
 }
 
 .cloud {
     position: absolute;
-    background: white;
+    background: rgba(255, 255, 255, 0.8);
     border-radius: 50px;
     animation: float 6s infinite;
+    z-index: 1;
 }
 
 .cloud1 {
@@ -117,6 +124,7 @@ button:hover {
     background: var(--primary-color);
     border-radius: 50%;
     animation: sway 4s infinite;
+    z-index: 1;
 }
 
 .flower::before {
